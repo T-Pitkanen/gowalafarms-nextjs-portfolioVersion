@@ -2,11 +2,20 @@
 import { useEffect, useState } from "react";
 import styles from "./products.module.css";
 import Image from "next/image";
+import productsData from "../../../data/products.json";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
+  const getProducts = () => {
+    setProducts(productsData);
+  };
+  
+  useEffect(() => {
+    getProducts();
+  }, []);
 
+  /*  ORIGINAL
   //GET
   const getProducts = async () => {
     const response = await fetch("http://localhost:3000/api/products");
@@ -112,8 +121,8 @@ const Products = () => {
       e.target.reset();
     } catch (error) {
       console.error("Error in handleUpdate:", error);
-    }
-  };
+    } 
+  }; */
 
   return (
     <div className={styles.container}>
@@ -140,9 +149,12 @@ const Products = () => {
               <p>
                 <b>Price: ${product.price}</b>{" "}
               </p>
-              <button onClick={(e) => handleDelete(e, product._id)}>
+              {/* <button onClick={(e) => handleDelete(e, product._id)}>
                 Delete
-              </button>
+              </button> */}
+              <button>
+                Delete
+              </button> 
             </span>
           );
         })}
@@ -150,7 +162,8 @@ const Products = () => {
 
       <h3>Add New</h3>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
+      <form className={styles.form}>
         <label>
           {" "}
           Title
@@ -186,7 +199,8 @@ const Products = () => {
 
       <h3>Update</h3>
 
-      <form className={styles.form} onSubmit={handleUpdate}>
+      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
+      <form className={styles.form}>
         <label>
           ID
           <input type="text" name="id" defaultValue={""} />

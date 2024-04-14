@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./orders.module.css";
-
+import ordersData from "../../../data/orders.json";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [newOrder, setNewOrder] = useState({
@@ -9,6 +9,16 @@ const Orders = () => {
     products: [{ id: "", amount: "" }],
   });
 
+  
+  const getOrders = () => {
+    setOrders(ordersData);
+  };
+  
+  useEffect(() => {
+    getOrders();
+  }, []);
+
+  /* ORIGINAL
   //GET
   const getOrders = async () => {
     const response = await fetch("http://localhost:3000/api/orders");
@@ -69,12 +79,13 @@ const Orders = () => {
     let data = await response.json();
 
     getOrders();
-  };
+  }; */
 
   return (
     <div className={styles.orders}>
       <div className={styles.createOrder}>
-        <form onSubmit={handleNewOrderSubmit} className={styles.form}>
+        {/* <form onSubmit={handleNewOrderSubmit} className={styles.form}> */}
+        <form  className={styles.form}>
           <h2>Create Order</h2>
           <input
             type="text"
@@ -88,7 +99,7 @@ const Orders = () => {
           {newOrder.products.map((x, i) => {
             return (
               <div className={styles.box} key={i}>
-                <input
+                {/* <input
                   name="id"
                   placeholder="Product ID"
                   value={x.id}
@@ -101,14 +112,34 @@ const Orders = () => {
                   value={x.amount}
                   onChange={(e) => handleNewOrderChange(e, i)}
                   className={styles.input}
+                /> */}
+                <input
+                  name="id"
+                  placeholder="Product ID"
+                  value={x.id}
+                  
+                  className={styles.input}
+                />
+                <input
+                  name="amount"
+                  placeholder="Amount"
+                  value={x.amount}
+                
+                  className={styles.input}
                 />
               </div>
             );
           })}
-          <button type="button" onClick={addProduct} className={styles.button}>
+          {/* <button type="button" onClick={addProduct} className={styles.button}>
+            Add Product
+          </button> */}
+          <button type="button" className={styles.button}>
             Add Product
           </button>
-          <button type="submit" className={styles.button}>
+          {/* <button type="submit" className={styles.button}>
+            Create Order
+          </button> */}
+          <button type="button" className={styles.button}>
             Create Order
           </button>
         </form>
@@ -140,7 +171,10 @@ const Orders = () => {
               <p>
                 <b>Created:</b> {new Date(order.created).toLocaleString()}
               </p>
-              <button onClick={() => handleDelete(order._id)}>
+              {/* <button onClick={() => handleDelete(order._id)}>
+                Delete
+              </button> */}
+              <button>
                 Delete
               </button>
             </div>

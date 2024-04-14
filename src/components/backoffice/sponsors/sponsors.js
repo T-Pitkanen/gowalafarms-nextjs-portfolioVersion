@@ -3,10 +3,21 @@ import { useEffect, useState } from "react";
 import styles from "./sponsors.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import sponsorsData from "../../../data/sponsors.json";
 
 const Sponsors = () => {
   const [sponsors, setSponsors] = useState([]);
 
+
+  const getSponsors = () => {
+    setSponsors(sponsorsData);
+  };
+  
+  useEffect(() => {
+    getSponsors();
+  }, []);
+
+  /* ORIGINAL
   const getSponsors = async () => {
     const response = await fetch("http://localhost:3000/api/sponsors");
     const data = await response.json();
@@ -52,7 +63,7 @@ const Sponsors = () => {
     let data = await response.json();
 
     getSponsors();
-  };
+  }; */
 
   return (
     <div className={styles.container}>
@@ -79,7 +90,10 @@ const Sponsors = () => {
                 height={100}
               />
             )}
-            <button onClick={(e) => handleDelete(e, sponsor._id)}>
+            {/* <button onClick={(e) => handleDelete(e, sponsor._id)}>
+              Delete
+            </button> */}
+            <button>
               Delete
             </button>
           </span>
@@ -88,7 +102,8 @@ const Sponsors = () => {
 
       <h3>Add New</h3>
 
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}> */}
+      <form className={styles.form}>
         <label>
           {" "}
           Sponsor name

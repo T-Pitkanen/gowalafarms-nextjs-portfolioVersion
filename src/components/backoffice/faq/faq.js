@@ -2,6 +2,7 @@
 
 import styles from "./faq.module.css";
 import { useState, useEffect } from "react";
+import faqData from "../../../data/faq.json";
 
 const Faqs = () => {
   const [faqs, setFaqs] = useState([]);
@@ -9,6 +10,17 @@ const Faqs = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
+
+  const getFaqs = () => {
+    setFaqs(faqData);
+  };
+
+  useEffect(() => {
+    getFaqs();
+  }, []);
+
+
+   /* ORIGINAL
   const getFaqs = async () => {
     const response = await fetch("http://localhost:3000/api/faqs");
     const data = await response.json();
@@ -19,6 +31,7 @@ const Faqs = () => {
     getFaqs();
   }, []);
 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,7 +100,7 @@ const Faqs = () => {
     setId("");
     setQuestion("");
     setAnswer("");
-  };
+  }; */
 
   return (
     <div className={styles.container}>
@@ -103,7 +116,8 @@ const Faqs = () => {
                 <b>{faq.question}</b>
               </p>
               <p>{faq.answer}</p>
-              <button onClick={(e) => handleDelete(e, faq._id)}>Delete</button>
+              {/* <button onClick={(e) => handleDelete(e, faq._id)}>Delete</button> */}
+              <button>Delete</button>
             </span>
           );
         })}
@@ -111,7 +125,8 @@ const Faqs = () => {
 
       <h3>Add New</h3>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
+      <form className={styles.form}>
         <label>
           Question?
           <input type="question" name="question" defaultValue={""} />
@@ -127,7 +142,8 @@ const Faqs = () => {
 
       <h3>Update</h3>
 
-      <form className={styles.form} onSubmit={handleUpdate}>
+      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
+      <form className={styles.form}>
         <label>
           ID:
           <input

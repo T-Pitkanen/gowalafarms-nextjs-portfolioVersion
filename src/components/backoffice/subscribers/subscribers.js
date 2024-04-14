@@ -1,10 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./subscribers.module.css";
+import subscriberData from "../../../data/subscribers.json";
 
 const Subscribers = () => {
   const [subscribers, setSubscribers] = useState([]);
 
+  const getSubscribers = () => {
+    setSubscribers(subscriberData);
+  };
+  
+  useEffect(() => {
+    getSubscribers();
+  }, []);
+
+  /* original
   //READ
   const getSubscribers = async () => {
     const response = await fetch("http://localhost:3000/api/subscribers");
@@ -112,7 +122,7 @@ const Subscribers = () => {
     let data = await response.json();
 
     getSubscribers();
-  };
+  }; */
 
   return (
     <div className={styles.container}>
@@ -139,7 +149,10 @@ const Subscribers = () => {
                 <td>{subscriber.validated ? "Yes" : "No"}</td>
 
                 <td>
-                  <button onClick={(e) => handleDelete(e, subscriber._id)}>
+                  {/* <button onClick={(e) => handleDelete(e, subscriber._id)}>
+                    Delete
+                  </button> */}
+                  <button>
                     Delete
                   </button>
                 </td>
@@ -151,7 +164,8 @@ const Subscribers = () => {
 
       <h3>Add New</h3>
 
-      <form className={styles.subForm} onSubmit={handleSubmit}>
+      {/* <form className={styles.subForm} onSubmit={handleSubmit}> */}
+     <form className={styles.subForm}> 
         <label>
           {" "}
           Name
@@ -196,7 +210,8 @@ const Subscribers = () => {
 
       <h3>Update</h3>
 
-      <form className={styles.subForm} onSubmit={handleUpdate}>
+      {/* <form className={styles.subForm} onSubmit={handleUpdate}> */}
+      <form className={styles.subForm}> 
         <label>
           ID:
           <input
