@@ -9,14 +9,6 @@
 .vscode
 
 
-#lib
-/lib
-
-#api
-/api
-
-#middleware
-middleware.js
 
 # testing
 /coverage

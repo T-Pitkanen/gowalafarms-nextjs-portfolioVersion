@@ -8,10 +8,10 @@
   width: 100%;
 }
 
-.card img{
-    object-fit: fill;
-    height: auto;
-    width: 100%;
+.card img {
+  object-fit: fill;
+  height: auto;
+  width: 100%;
 }
 
 .card {
@@ -40,10 +40,9 @@
 .overlay h2,
 .overlay h3 {
   font-size: 1.25em;
-
 }
 
-.overlayIcon{
+.overlayIcon {
   padding-top: 1vh;
   font-size: 1.2em;
   cursor: pointer;
@@ -53,28 +52,54 @@
   font-size: 0.75em;
 }
 
-
 @media screen and (min-width: 1024px) {
   .container {
     width: 100%;
     margin: 0;
     margin-bottom: 10vh;
     padding: 10vh 0;
-   flex-direction: row;
-   flex-wrap: wrap;
-   background-image: url('/blobs/blob_02.jpg');
-   background-size: cover;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url("/blobs/blob_02.jpg");
+    background-size: cover;
   }
 
   .card {
-  
     width: auto;
-   
   }
 
-  .card img{
+  .card img {
     object-fit: fill;
     height: auto;
     width: 275px;
+  }
 }
+
+@media screen and (min-width: 1910px) {
+  .container {
+    padding: 10vh;
+  }
+
+  .card {
+    width: auto;
+  }
+
+  .card img {
+    object-fit: fill;
+    height: auto;
+    width: 300px;
+  }
+
+  .overlay {
+    width: 90%;
+  }
+
+  .overlay h2,
+  .overlay h3 {
+    font-size: 1.5em;
+  }
+
+  .overlay p {
+    font-size: 1em;
+  }
 }

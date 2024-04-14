@@ -80,3 +80,16 @@
     width: 80%;
   }
 }
+
+@media screen and (min-width: 1910px) {
+  .teams h1,
+  .teams h2,
+  .products h1,
+  .products h2 {
+    font-size: 2.75em;
+  }
+
+  .teams p, .products p {
+    font-size: 1.25em;
+  }
+}

@@ -108,7 +108,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1910px) {
   .navigation .basket {
     width: 40%;
   }
@@ -121,4 +121,28 @@
     width: 40px;
     height: auto;
   }
+}
+
+@media screen and (min-width: 1910px) {
+  .navigation .basket {
+    width: 40%;
+  }
+
+  .navigation .navigationBar {
+    padding: 0 15rem;
+    height: 100px;
+  }
+
+  .naviLinks a{
+    font-size: 1.25em;
+    width: auto;
+    padding: 0.5em;
+  }
+
+  .cart{
+    font-size: 1.5em;
+  }
+
+
+
 }
