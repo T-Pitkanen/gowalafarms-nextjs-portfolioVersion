@@ -3,15 +3,22 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./services.module.css";
+import servicesData from "../../data/services.json";
 
 const Services = () => {
   const [services, setServices] = useState([]);
 
+  //LOCAL DATA
+  useEffect(() => {
+    setServices(servicesData);
+  }, []);
+
+  /* ORIGINAL 
   useEffect(() => {
     fetch("http://localhost:3000/api/services")
       .then((response) => response.json())
       .then((data) => setServices(data));
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.container}>

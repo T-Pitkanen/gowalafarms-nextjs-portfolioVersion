@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5f16",
+        "name": "Anders Christensen",
+        "email": "anders@mediacollege.dk",
+        "message": "",
+        "validated": false,
+        "created": "2024-04-08T09:40:56.940Z",
+        "__v": 0
+    },
+    {
+        "_id": "661913f63cb9c90eec9b2721",
+        "name": "Anne Jensen",
+        "email": "anne@email.com",
+        "message": "Hello, I would like to know more about your services.",
+        "validated": true,
+        "created": "2024-04-12T09:02:51.547Z",
+        "__v": 0
+    },
+    {
+        "_id": "661914103cb9c90eec9b2726",
+        "name": "Michael Nielsen",
+        "email": "michael@email.com",
+        "message": "",
+        "validated": false,
+        "created": "2024-04-12T09:02:51.547Z",
+        "__v": 0
+    },
+    {
+        "_id": "661938e9ae8aced3abf5f9d5",
+        "name": "Liam O'Conner",
+        "email": "liam@email.com",
+        "message": "Hello, I would like to know more about your services.",
+        "validated": true,
+        "created": "2024-04-12T13:11:31.818Z",
+        "__v": 0
+    }
+]

@@ -1,0 +1,145 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5ebc",
+        "title": "Gowala Cheese",
+        "description": "Continually productize compelling quality for <b>packed</b> with  Elated Themes Setting up to website and it crating pages",
+        "imagePath": "/products/product_01.jpg",
+        "price": 15.99,
+        "discountInPercent": 0,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ebe",
+        "title": "Farm Fresh Butter",
+        "description": "Introducing \"Gowala Farm Fresh Butter,\" a delectable delight crafted straight from the heart of our picturesque farm. Nestled amidst rolling hills and lush pastures, our farm is a sanctuary where nature's bounty meets artisanal expertise, resulting in butter that's truly unparalleled.",
+        "imagePath": "/products/product_04.jpg",
+        "price": 7.45,
+        "discountInPercent": 25,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ec0",
+        "title": "Velvet Cream",
+        "description": "magine lush pastures dotted with contented cows grazing leisurely, their milk imbued with the essence of pure, unadulterated goodness. From this creamy elixir, we carefully extract the richest, most velvety cream, preserving its natural flavor and freshness.",
+        "imagePath": "/products/product_03.jpg",
+        "price": 11.3,
+        "discountInPercent": 15,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ec2",
+        "title": " Heritage Cheese Rolls",
+        "description": "Hand-rolled and lovingly aged to perfection, our Farmhouse Heritage Cheese Rolls boast a robust flavor profile that reflects the terroir of our farm. Encased in a savory, golden rind, these cheeses reveal a tantalizing mosaic of nutty, earthy notes with a hint of sweetness, reminiscent of the tranquil pastures where our cows roam",
+        "imagePath": "/products/product_02.jpg",
+        "price": 51,
+        "discountInPercent": 0,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ec4",
+        "title": "Dreamy Ice Cream",
+        "description": "Each scoop of Dreamy Cream Ice Cream is a decadent indulgence, boasting a luxuriously creamy texture and a symphony of flavors that dance on the taste buds. From classic favorites like rich vanilla bean and velvety chocolate to whimsical creations like honey lavender and strawberry basil, every spoonful is a journey into pure bliss.",
+        "imagePath": "/products/product_05.jpg",
+        "price": 12.45,
+        "discountInPercent": 0,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ec6",
+        "title": "Cereal Milk",
+        "description": "Picture this: the soft chirping of birds greeting the dawn as the sun rises over rolling hills, casting a golden glow on fields of ripe grains. From this serene landscape, we draw inspiration to craft our Cereal Milk Ice Cream, a nostalgic ode to the simple joys of farm life.",
+        "imagePath": "/products/product_06.jpg",
+        "price": 10.15,
+        "discountInPercent": 0,
+        "exclusive": true,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ec8",
+        "title": "Cheese Rolls",
+        "description": "Each bite of our cheese rolls offers a symphony of textures: the firm, crumbly interior gives way to a creamy, melt-in-your-mouth richness that lingers on the palate, leaving you craving more. Whether enjoyed on its own or paired with crusty bread, fruits, or charcuterie, our cheese rolls elevate any culinary experience to new heights of gastronomic delight.",
+        "imagePath": "/products/product_07.jpg",
+        "price": 35.5,
+        "discountInPercent": 10,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5eca",
+        "title": "Artisanal Mozzarella",
+        "description": "Introducing \"Gowala Farm's Artisanal Mozzarella,\" a tantalizing creation that encapsulates the essence of our picturesque farm. Nestled amidst rolling meadows and sun-kissed orchards, our farm is a sanctuary where tradition meets innovation, resulting in mozzarella that's as creamy as it is flavorful.",
+        "imagePath": "/products/product_08.jpg",
+        "price": 22.22,
+        "discountInPercent": 0,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ecc",
+        "title": "Farm-Fresh Meat Nr.1",
+        "description": "Introducing \"A Plate of Farm-Fresh Meat\" from your very own farm. Nestled amidst rolling hills and sun-kissed fields, your farm is a haven where nature's bounty thrives, resulting in meats that are as succulent as they are flavorful.",
+        "imagePath": "/products/product_09.jpg",
+        "price": 15.22,
+        "discountInPercent": 5,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ece",
+        "title": "Farm-Fresh Meat Nr.2",
+        "description": "Introducing \"A Plate of Farm-Fresh Meat\" from your very own farm. Nestled amidst rolling hills and sun-kissed fields, your farm is a haven where nature's bounty thrives, resulting in meats that are as succulent as they are flavorful.",
+        "imagePath": "/products/product_10.jpg",
+        "price": 15.22,
+        "discountInPercent": 5,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ed0",
+        "title": "Signature Tenderloin",
+        "description": "A culinary masterpiece cultivated from the heart of your bucolic oasis. Nestled amidst lush pastures and serene landscapes, your farm is a sanctuary where nature's bounty meets artisanal expertise, resulting in meat that's not only tender but truly transcendent.",
+        "imagePath": "/products/product_11.jpg",
+        "price": 15.22,
+        "discountInPercent": 5,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ed2",
+        "title": "Go-Wala Tenderloin",
+        "description": "Culinary masterpiece cultivated from the heart of your bucolic oasis. Nestled amidst lush pastures and serene landscapes, your farm is a sanctuary where nature's bounty meets artisanal expertise, resulting in meat that's not only tender but truly transcendent.",
+        "imagePath": "/products/product_12.jpg",
+        "price": 18.44,
+        "discountInPercent": 15,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ed4",
+        "title": "Go-Farma Tenderloin",
+        "description": "Whether grilled to a perfect medium-rare and served with a drizzle of herb-infused butter or slow-roasted to fall-apart perfection, your tenderloin is the epitome of culinary excellence. Its buttery texture and robust flavor are a testament to the sustainable farming practices and commitment to quality that define your farm.",
+        "imagePath": "/products/product_13.jpg",
+        "price": 23.12,
+        "discountInPercent": 0,
+        "exclusive": false,
+        "created": "2024-04-08T09:40:56.951Z",
+        "__v": 0
+    }
+]

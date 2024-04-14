@@ -3,6 +3,7 @@
 import { FaList } from "react-icons/fa6";
 import { IoMdGrid } from "react-icons/io";
 
+import productsData from "../../data/products.json";
 
 import { useEffect, useState } from "react";
 import styles from "./products.module.css";
@@ -37,6 +38,16 @@ const Products = ({ exclusive }) => {
       : null;
   };
 
+    //LOCAL DATA
+    useEffect(() => {
+      const getProducts = async () => {
+        setProducts(productsData);
+      };
+    
+      getProducts();
+    }, []);
+
+  /* API CALL
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch("http://localhost:3000/api/products");
@@ -46,6 +57,9 @@ const Products = ({ exclusive }) => {
 
     getProducts();
   }, []);
+  */
+
+
 
   useEffect(() => {
     setIsExclusive(exclusive);

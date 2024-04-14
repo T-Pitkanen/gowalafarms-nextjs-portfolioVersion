@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5efc",
+        "question": "How do I place an order for dairy products on your website?",
+        "answer": "You can easily place an order by browsing our selection of dairy products, adding items to your cart, and proceeding to checkout. Follow the prompts to enter your shipping and payment information, and your order will be processed.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5efe",
+        "question": "What types of dairy products do you offer for sale?",
+        "answer": "We offer a wide range of dairy products, including various cheeses, milk, yogurt, butter, and ice cream. Our selection includes both traditional favorites and unique artisanal creations.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f00",
+        "question": "Are your dairy products sourced from your own farm?",
+        "answer": "Yes, the majority of our dairy products are sourced directly from our own farm, ensuring the highest quality and freshness. We take pride in our sustainable farming practices and the care we provide to our animals.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f02",
+        "question": "Do you offer any dairy products that are suitable for people with dietary restrictions?",
+        "answer": "Yes, we offer a range of dairy-free and lactose-free options for customers with dietary restrictions. These products are clearly labeled on our website for easy identification.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f04",
+        "question": "How do you ensure the freshness of your dairy products during shipping?",
+        "answer": "We take great care to package our dairy products securely and use expedited shipping methods to minimize transit time. Additionally, we may use ice packs or dry ice for temperature-sensitive items to ensure they arrive fresh.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f06",
+        "question": "Can I modify or cancel my order after it has been placed?",
+        "answer": "Modifications or cancellations may be possible if your order has not yet been processed for shipment. Please contact our customer service team as soon as possible to discuss any changes you need to make.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f08",
+        "question": "Do you offer international shipping for your dairy products? ",
+        "answer": "At this time, we only offer shipping within [insert country/region]. We do not currently offer international shipping for our dairy products.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f0a",
+        "question": "Are your dairy products certified organic?",
+        "answer": "Yes, the majority of our dairy products are certified organic. We adhere to strict organic farming practices to ensure the highest quality and sustainability of our products.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f0c",
+        "question": "What is your return policy for dairy products?",
+        "answer": "We want you to be completely satisfied with your purchase. If you are not satisfied with any of our dairy products, please contact us within [insert number] days of receipt to discuss returns or exchanges.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5f0e",
+        "question": "How can I contact customer service if I have further questions about your dairy products or my order?",
+        "answer": "You can reach our customer service team by phone at [insert phone number] or by email at [insert email address]. We are available to assist you with any questions or concerns you may have.",
+        "created": "2024-04-08T09:40:56.954Z",
+        "__v": 0
+    }
+]

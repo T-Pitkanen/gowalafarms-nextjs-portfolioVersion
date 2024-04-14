@@ -1,0 +1,49 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5ef4",
+        "title": "Selecting The Best Cows",
+        "imagePath": "/articles/01.jpg",
+        "category": "services",
+        "body": "<p>Heritage Breeds Preservation: Your farm prioritizes the conservation of heritage cattle breeds. By selectively choosing cows with lineage tracing back generations, you contribute to preserving genetic diversity and cultural heritage in the bovine population.</p>",
+        "checklist": [
+            {
+                "title": "We prioritizes the conservation of heritage cattle breeds"
+            },
+            {
+                "title": "We ensure optimal animal welfare and sustainable land management."
+            }
+        ],
+        "created": "2024-04-08T09:40:56.953Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ef6",
+        "title": "Preserving",
+        "imagePath": "/articles/02.jpg",
+        "category": "services",
+        "body": "<p>Gowala Farms, focuses on producing premium dairy products. By selecting cows with superior milk-producing genetics, you maintain a consistently high-quality supply of milk for your artisanal cheese and ice cream production</p>",
+        "checklist": [
+            {
+                "title": "We specializes in grass-fed beef production"
+            },
+            {
+                "title": "We optimize pasture utilization, soil health, and carbon sequestration"
+            },
+            {
+                "title": "We maintain a consistently high-quality supply of milk for you"
+            }
+        ],
+        "created": "2024-04-08T09:40:56.953Z",
+        "__v": 0
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ef8",
+        "title": "Pasture Compatibility",
+        "imagePath": "/articles/03.jpg",
+        "category": "services",
+        "body": "<p>Gowala Farms, specializes in grass-fed beef production. By carefully selecting cows with traits conducive to thriving on pasture diets, such as efficient conversion of forage into lean muscle, you ensure your beef stands out for its exceptional flavor and nutritional profile.</p>",
+        "checklist": [],
+        "created": "2024-04-08T09:40:56.953Z",
+        "__v": 0
+    }
+]

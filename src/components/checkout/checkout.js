@@ -24,6 +24,41 @@ const Checkout = () => {
     //if empty, will be only called once
   }, [getProductsForBasket]);
 
+  useEffect(() => {
+    const getProducts = async () => {
+      let p = await getProductsForBasket();
+      setProductsFromBasket(p);
+    };
+  
+    getProducts();
+    //if empty, will be only called once
+  }, [getProductsForBasket]);
+  
+  const handleCheckout = async () => {
+    try {
+      const orderItems = basket.map((item) => ({
+        id: item.id,
+        amount: item.amount,
+      }));
+  
+      console.log({ products: orderItems });
+  
+     
+      setTimeout(() => {
+        console.log({
+          products: orderItems,
+          email: email,
+          created: new Date().toISOString(),
+        });
+  
+        router.push("/thankyou");
+      }, 2000); // 2000 ms = 2 seconds
+    } catch (error) {
+      console.error("Error in handleCheckout:", error);
+    }
+  };
+
+  /* ORIGINAL
   const handleCheckout = async () => {
     try {
       const orderItems = basket.map((item) => ({
@@ -55,7 +90,7 @@ const Checkout = () => {
       console.error("Error in handleCheckout:", error);
     }
     router.push("/thankyou");
-  };
+  }; */
 
   return (
     <div className={styles.container}>

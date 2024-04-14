@@ -3,11 +3,18 @@
 import Accordion from "./accordion";
 import { useEffect, useState } from "react";
 import styles from "./accordions.module.css";
+import faqData from "../../data/faq.json";
 
 const Faqs = () => {
   const [questionsData, setQuestionsData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
+
+    //LOCAL DATA
+    useEffect(() => {
+      setQuestionsData(faqData);
+    }, []);
+
+  /* ORIGINAL
   useEffect(() => {
     const getQuestions = async () => {
       const response = await fetch("api/faqs");
@@ -17,8 +24,7 @@ const Faqs = () => {
     };
 
     getQuestions();
-  }, []);
-
+  }, []); */
 
 
   return (

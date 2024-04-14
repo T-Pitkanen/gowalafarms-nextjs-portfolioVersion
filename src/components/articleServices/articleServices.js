@@ -4,15 +4,22 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./articleServices.module.css";
 import { IoMdCheckboxOutline } from "react-icons/io";
+import serviceData from "../../data/service.json";
 
 const ArticleServices = () => {
   const [services, setServices] = useState([]);
 
+//LOCAL DATA
+  useEffect(() => {
+    setServices(serviceData);
+  }, []);
+
+  /* ORIGINAL
   useEffect(() => {
     fetch("http://localhost:3000/api/articles?category=services")
       .then((response) => response.json())
       .then((data) => setServices(data));
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.container}>

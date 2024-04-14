@@ -9,6 +9,32 @@ const Subscribe = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [submittedEmail, setSubmittedEmail] = useState("");
 
+
+  //Taking away the POST call 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    const email = event.target.elements.email.value;
+  
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Check your email address!");
+      return;
+    }
+  
+    setEmail(email);
+    setShowModal(true);
+  
+    // Simulate a delay
+    setTimeout(() => {
+      setSubmittedEmail(email);
+      setEmail("");
+      setErrorMessage("");
+    }, 2000); 
+  };
+
+  /*  ORIGINAL
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -44,7 +70,8 @@ const Subscribe = () => {
     } catch (error) {
       console.error(error);
     }
-  };
+  }; 
+  */
 
   return (
     <div className={styles.container}>

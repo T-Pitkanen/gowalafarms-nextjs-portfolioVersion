@@ -2,11 +2,23 @@
 
 import { useState, useEffect } from "react";
 import styles from "./contact.module.css";
+import contactsData from "../../../data/contacts.json";
 
 
 const Contact = () => {
   const [messages, setMessages] = useState([]);
 
+  const getMessages = () => {
+    setMessages(contactsData);
+  };
+  
+  useEffect(() => {
+    getMessages();
+  }, []);
+
+
+
+/* ORIGINAL
   const getMessages = async () => {
     const response = await fetch("http://localhost:3000/api/contacts");
     const data = await response.json();
@@ -17,6 +29,8 @@ const Contact = () => {
     getMessages();
   }, []);
 
+
+  
   //CREATE
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,7 +73,7 @@ const Contact = () => {
       console.error("Error in handleSubmit:", error);
     }
 
-  };
+  }; 
 
   //DELETE
   const handleDelete = async (id) => {
@@ -73,7 +87,7 @@ const Contact = () => {
 
     set
     getMessages();
-  };
+  }; */
 
   return (
     <div className={styles.container}>
@@ -89,14 +103,15 @@ const Contact = () => {
           <p>
             <b>Message:</b> {message.message}
           </p>
-          <button onClick={() => handleDelete(message._id)}>Delete</button>
+         {/*<button onClick={() => handleDelete(message._id)}>Delete</button> */} 
           <hr />
         </div>
       ))}
 
       <h3>Add New</h3>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
+      <form className={styles.form}>
         <label>
           {" "}
           Name

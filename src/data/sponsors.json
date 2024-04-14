@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5ed8",
+        "name": "organic",
+        "imagePath": "/sponsors/01.png",
+        "created": "2024-04-08T09:40:56.952Z",
+        "__v": 0,
+        "link": "https://mcdm.dk/"
+    },
+    {
+        "_id": "6613bba94d98def4dfba5eda",
+        "name": "organic",
+        "imagePath": "/sponsors/02.png",
+        "created": "2024-04-08T09:40:56.952Z",
+        "__v": 0,
+        "link": "https://mcdm.dk/"
+    },
+    {
+        "_id": "6613bba94d98def4dfba5edc",
+        "name": "organic",
+        "imagePath": "/sponsors/03.png",
+        "created": "2024-04-08T09:40:56.952Z",
+        "__v": 0,
+        "link": "https://mcdm.dk/"
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ede",
+        "name": "organic",
+        "imagePath": "/sponsors/04.png",
+        "created": "2024-04-08T09:40:56.952Z",
+        "__v": 0,
+        "link": "https://mcdm.dk/"
+    },
+    {
+        "_id": "6613bba94d98def4dfba5ee0",
+        "name": "organic",
+        "imagePath": "/sponsors/05.png",
+        "created": "2024-04-08T09:40:56.952Z",
+        "__v": 0,
+        "link": "https://mcdm.dk/"
+    },
+    {
+        "_id": "6619330fae8aced3abf5f932",
+        "name": "New Sponsor",
+        "imagePath": "/sponsors/sponsor_2285533963.png",
+        "link": "https://mcdm.dk/",
+        "created": "2024-04-12T13:11:31.833Z",
+        "__v": 0
+    }
+]

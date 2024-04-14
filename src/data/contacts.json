@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "661926433cb9c90eec9b285c",
+        "name": "Mikaela Smith",
+        "email": "mikaela@email.com",
+        "message": "Hello, I would like to know more about your services.",
+        "phone": "45789123",
+        "created": "2024-04-12T09:02:51.562Z",
+        "__v": 0
+    },
+    {
+        "_id": "661926433cb9c90eec9b285c",
+        "name": "Mikael Smith",
+        "email": "mikael@email.com",
+        "message": "Hello, I would like to know more about your services.",
+        "phone": "123854",
+        "created": "2024-04-12T09:02:51.562Z",
+        "__v": 0
+    }
+]

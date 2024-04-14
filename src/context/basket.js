@@ -4,6 +4,7 @@
 //It's designed to share data that can be considered "global" for a tree of React components, such as the currently authenticated user, theme, or preferred language.
 
 import { createContext, useContext, useEffect, useState } from "react";
+import productsData from "@/data/products.json";
 
 const BasketContext = createContext();
 
@@ -57,6 +58,29 @@ export const BasketContextProvider = ({ children }) => {
     setBasket(basket);
   };
 
+  const getProductsForBasket = () => {
+    let basket = localStorage.getItem("basket");
+    basket = JSON.parse(basket);
+  
+    if (basket && basket.length > 0) {
+      let productIds = basket.map((item) => item.id);
+      let data = productsData.filter(product => productIds.includes(product._id));
+  
+      data = data.map((product) => {
+        let basketItem = basket.find((item) => item.id === product._id);
+        product.amount = basketItem.amount;
+        return product;
+      });
+  
+      console.log(data);
+  
+      return data;
+    }
+  
+    return [];
+  };
+
+  /* ORIGINAL 
   const getProductsForBasket = async () => {
     let basket = localStorage.getItem("basket");
     basket = JSON.parse(basket);
@@ -79,7 +103,7 @@ export const BasketContextProvider = ({ children }) => {
     }
 
     return [];
-  };
+  }; */
 
   const cleanBasket = () => {
     localStorage.removeItem("basket");

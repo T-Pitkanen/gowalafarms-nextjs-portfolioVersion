@@ -4,15 +4,23 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./about.module.css";
 import { IoMdCheckboxOutline } from "react-icons/io";
+import aboutData from "../../data/about.json";
 
 const About = () => {
   const [articles, setArticles] = useState([]);
 
+
+  //LOCAL DATA
+  useEffect(() => {
+    setArticles(aboutData);
+  }, []);
+
+  /* ORIGINAL
   useEffect(() => {
     fetch("http://localhost:3000/api/articles?category=about")
       .then((response) => response.json())
       .then((data) => setArticles(data));
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.container}>

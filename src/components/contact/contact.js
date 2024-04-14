@@ -27,6 +27,68 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+  
+    try {
+      schema.validateSync(
+        {
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+        },
+        { abortEarly: false }
+      );
+  
+      
+      setTimeout(() => {
+        console.log({
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+        });
+  
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+  
+        setSuccessMessage("Thank You for your message!");
+  
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 5000);
+      }, 2000);
+    } catch (error) {
+      if (error instanceof Yup.ValidationError) {
+        error.inner.forEach((err) => {
+          switch (err.path) {
+            case "name":
+              setNameError(err.message);
+              break;
+            case "email":
+              setEmailError(err.message);
+              break;
+            case "phone":
+              setPhoneError(err.message);
+              break;
+            case "message":
+              setMessageError(err.message);
+              break;
+            default:
+              break;
+          }
+        });
+      } else {
+        console.error(error);
+      }
+    }
+  };
+
+
+  /* ORIGINAL
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     try {
       schema.validateSync(
@@ -90,6 +152,8 @@ const Contact = () => {
       }
     }
   };
+
+  */
 
   return (
     <div className={styles.container}>

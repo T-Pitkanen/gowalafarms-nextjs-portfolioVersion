@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./partners.module.css";
 import Link from "next/link";
+import partnersData from "../../data/sponsors.json";
 
 import { register } from "swiper/element/bundle";
 import "swiper/css";
@@ -16,6 +17,17 @@ const Partners = () => {
 
   const [windowDimensions, setWindowDimensions] = useState({});
 
+//LOCAL DATA
+  useEffect(() => {
+    const getPartners = async () => {
+      setPartners(partnersData);
+      swiperRef.current.swiper.update();
+    };
+  
+    getPartners();
+  }, []);
+
+  /* API CALL
   useEffect(() => {
     const getPartners = async () => {
       const response = await fetch("http://localhost:3000/api/sponsors");
@@ -26,7 +38,7 @@ const Partners = () => {
     };
 
     getPartners();
-  }, []);
+  }, []); */
 
 
   // Handle window resize

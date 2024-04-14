@@ -1,0 +1,25 @@
+[
+    {
+        "_id": "6613bba94d98def4dfba5efa",
+        "title": "Welcome to Our Gowala Dairy Farm",
+        "imagePath": "/articles/04.jpg",
+        "category": "about",
+        "body": "<p>Nullam elementum tincidunt massa pulvinar leo <b>ultricies</b> the mp <a href=\"/services\">imperdiet</a> molestie est volutpat at, sed viverra cursus us et iusto odio <a href=\"/shop\">dignissimos</a> Setting up to website productize compelling quality for packed.</p><p>Nullam elementum tincidunt massa pulvinar leo <b>ultricies</b> the mp <a href=\"/services\">imperdiet</a> molestie est volutpat at, sed viverra cursus us et iusto odio <a href=\"/shop\">dignissimos</a> Setting up to website productize compelling quality for packed.</p>",
+        "checklist": [
+            {
+                "title": "We are providing different services"
+            },
+            {
+                "title": "We are one of leading company"
+            },
+            {
+                "title": "Learn how to grow your Business"
+            },
+            {
+                "title": "Professional solutions for your business"
+            }
+        ],
+        "created": "2024-04-08T09:40:56.953Z",
+        "__v": 0
+    }
+]

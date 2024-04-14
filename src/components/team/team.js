@@ -5,6 +5,7 @@ import styles from "./team.module.css";
 import Image from "next/image";
 import ContentLoader from "react-content-loader";
 import { FaAngleUp, FaAngleDown  } from "react-icons/fa6";
+import employeesData from "../../data/employees.json";
 
 
 const Team = () => {
@@ -12,6 +13,14 @@ const Team = () => {
   const [loading, setLoading] = useState(true);
   const [expandedEmployeeId, setExpandedEmployeeId] = useState(null);
 
+
+  //LOCAL DATA
+  useEffect(() => {
+    setEmployees(employeesData);
+    setLoading(false);
+  }, []);
+
+  /* API CALL
   useEffect(() => {
     fetch("http://localhost:3000/api/employees")
       .then((response) => response.json())
@@ -19,7 +28,7 @@ const Team = () => {
         setEmployees(data);
         setLoading(false);
       });
-  }, []);
+  }, []); */
 
   if (loading) {
     return (

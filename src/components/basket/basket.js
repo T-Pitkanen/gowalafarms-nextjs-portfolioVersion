@@ -3,6 +3,7 @@ import styles from './basket.module.css';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import productsData from '@/data/products.json';
 
 const Basket = () => {
 	//useBasket hook to get the current state of basket
@@ -11,6 +12,30 @@ const Basket = () => {
 	//State variable with a setter function. The initial value is an empty array.
 	const [basketItems, setBasketItems] = useState([]);
 
+	useEffect(() => {
+		const getProductByRange = () => {
+		  let idRange = basket.map((item) => item.id);
+	  
+		  if (idRange.length > 0) {
+			let products = productsData.filter(product => idRange.includes(product._id));
+	  
+			products.map((product) => {
+			  let basketAmount = basket.find((item) => item.id === product._id);
+	  
+			  if (basketAmount) {
+				product.amount = basketAmount.amount;
+			  }
+			});
+	  
+			setBasketItems(products);
+		  }
+		};
+	  
+		getProductByRange();
+	  }, [basket]);
+
+
+	/* 	ORIGINAL
 	useEffect(() => {
 		//fetching the products based on IDs. IDs are obtained from the basket.
 		const getProductByRange = async () => {
@@ -36,7 +61,7 @@ const Basket = () => {
 		};
 
 		getProductByRange();
-	}, [basket]);
+	}, [basket]); */
 
 	//finds the item in the basket and changes the new amount of the product. delta = change in amount
 	const handleAmountChange = (id, delta) => {

@@ -2,10 +2,20 @@
 import { useEffect, useState } from "react";
 import styles from "./employees.module.css";
 import Image from "next/image";
+import employeesData from "../../../data/employees.json";
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
 
+  const getEmployees = () => {
+    setEmployees(employeesData);
+  };
+
+  useEffect(() => {
+    getEmployees();
+  }, []);
+
+  /* ORIGINAL
   const getEmployees = async () => {
     const response = await fetch("http://localhost:3000/api/employees");
     const data = await response.json();
@@ -16,6 +26,8 @@ const Employees = () => {
     getEmployees();
   }, []);
 
+
+ 
 
   //CREATE
   const handleSubmit = async (e) => {
@@ -99,7 +111,7 @@ const Employees = () => {
     } catch (error) {
       console.error("Error in handleUpdate:", error);
     }
-  };
+  }; */
 
   return (
     <div className={styles.container}>
@@ -116,7 +128,6 @@ const Employees = () => {
               />
               <p>{employee._id}</p>
               <p>
-                
                 <b>{employee.name}</b>
               </p>
               <p>{employee.description}</p>
@@ -134,7 +145,8 @@ const Employees = () => {
 
       <h3>Add New</h3>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
+      <form className={styles.form}>
         <label>
           {" "}
           Name
@@ -160,7 +172,8 @@ const Employees = () => {
 
       <h3>Update</h3>
 
-      <form className={styles.form} onSubmit={handleUpdate}>
+      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
+      <form className={styles.form}>
         <label>
           ID:
           <input type="text" name="id" defaultValue={""} />
