@@ -12,6 +12,10 @@
 #lib
 /lib
 
+#api
+/api
+
+#middleware
 middleware.js
 
 # testing
