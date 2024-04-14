@@ -1,0 +1,48 @@
+
+
+.container {
+
+    margin: 10vh 0;
+    width: 100vw;
+    padding: 3em 0 3em 0;
+    background-color: #EFF4F8;
+    height: auto;
+
+}
+
+
+/* .partner {
+    margin: auto auto;
+
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.partnerImg {
+    margin-left: 10vw;
+    height: auto;
+    width: 60%;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+       
+        width: 100%;
+        justify-content: space-between;
+        padding: 2em;
+        height: auto;
+    }
+
+    .partnerImg {
+        /* margin-left: 10vw; */
+        height: auto;
+        width: 50%;
+        object-fit: cover;
+    }
+
+  
+}

@@ -1,0 +1,68 @@
+.container {
+  width: 90%;
+  margin: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #eff4f8;
+  padding: 2em 0.5em;
+}
+
+.form {
+  width: 90%;
+  gap: 1em;
+}
+
+.form input,
+.form textarea {
+  border-radius: 5px;
+  border: 1px solid rgb(230, 230, 230);
+  padding: 1em 0.75em;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.form,
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form button {
+  border: none;
+  padding: 1em;
+  background-color: var(--color-green);
+  color: white;
+}
+
+.successMessage {
+  color: var(--color-green);
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.errorMessage {
+  font-size: 15px;
+  padding: 2vw;
+  color: rgb(182, 61, 61);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    gap: 1em;
+    height: 100%;
+    padding: 2em 0;
+    background-color: #eff4f8;
+  }
+  .errorMessage {
+    padding: 1vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 50%;
+  }
+}

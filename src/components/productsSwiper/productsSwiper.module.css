@@ -1,0 +1,130 @@
+.slider {
+    width: 30%;
+    margin-top: 12vh;
+    padding: 2em;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EFF4F8;
+    border: 2px solid white;
+    box-shadow: 0 6px 6px #EBEBEB;
+  }
+  
+  .slideContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: 100%;
+    /* padding-bottom: 35vh; */
+  }
+  
+  .slideTitle {
+    position: absolute;
+    padding-top: 25vh;
+    letter-spacing: 1px;
+    z-index: 1;
+    font-size: 2em;
+    color: var(--color-green);
+    font-weight: bold;
+  }
+
+
+  
+  .slideTitle h1 {
+    font-size: 1em;
+  }
+
+  
+  .swiperContainer {
+    width: 100%;
+  }
+  
+  .swiperImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  
+  .slideButton {
+    position: absolute;
+    top: 65%;
+  margin-top: 5vh;
+    z-index: 1;
+  }
+  
+  .slider button {
+    border: none;
+    padding: 1em 2em;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  
+  .slideLink {
+    background-color: var(--color-green);
+    color: white;
+    font-size: 1em;
+  }
+  
+  .slideLink a {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .controlBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .controlPanel {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .controlBtn button svg {
+    font-size: 1.5em;
+  }
+  
+  .controlBtn button {
+    background-color: white;
+  }
+
+  .swiper-pagination {
+    margin-top: 50vh;
+  }
+
+  .swiper-pagination-bullet-active {
+    --swiper-pagination-color-active: green;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* .swiperImage {
+      height: 50vh;
+    }
+  
+    .slideTitle {
+      
+      padding-top: 10vh;
+  
+    }
+  
+    .slideTitle h1 {
+      font-size: 1em;
+    }
+    .slideTitle h2 {
+      font-size: 1em;
+    } */
+  }
+  

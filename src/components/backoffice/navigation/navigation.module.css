@@ -1,0 +1,91 @@
+.navigation {
+    background-color: #fff;
+    color : #000;
+    position: sticky;
+    top: 0;
+    font-family: var(--font-roboto);
+    z-index: 200;
+    
+}
+
+.logo img {
+    width: auto;
+    height: 80px;
+
+}
+
+.container {
+    display: flex ;
+    gap: 1em;
+    padding: 1em;
+}
+
+.container a {
+    color: black;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+ 
+}
+
+.navBar a {
+    font-weight: 700;
+    text-decoration: none;
+    padding: 40px 12px 35px;
+}
+
+
+
+.navBar .nav a:hover {
+    background-color : var(--color-solidPink);
+    color: #fff;
+}
+
+.mobilenav {
+    background-color: var(--color-mineShaft);
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+
+.mobilenav a{
+    padding: 20px 20px 20px;
+    text-decoration: none;
+    display: block;
+    color : #fff;
+    font-weight: 600;
+}
+
+.mobilenav a:hover {
+    background-color : var(--color-solidPink);
+    color: #fff;
+}
+
+
+.navigation.active  .mobilenav {
+    display: block;
+}
+.burger svg{
+    font-size: 25px;
+}
+.nav {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        display: block;
+    }
+    .burger {
+        display: none;
+    }
+
+    .navigation.active .mobilenav {
+        display: none;
+    }
+}

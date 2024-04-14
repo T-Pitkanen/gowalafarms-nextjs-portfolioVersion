@@ -1,0 +1,121 @@
+.slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.slideContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slideTitle {
+  position: absolute;
+  padding-top: 5vh;
+  letter-spacing: 1px;
+  z-index: 1;
+  color: var(--color-green);
+}
+
+.slideTitle h1 {
+  font-size: 2.75em;
+  margin-bottom: -10px;
+}
+
+.swiperContainer {
+  width: 100%;
+}
+
+.swiperImage {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.slideButton {
+  position: absolute;
+  top: 65%;
+
+  z-index: 1;
+}
+
+.slider button {
+  border: none;
+  padding: 1em 2em;
+  border-radius: 20px;
+  margin-bottom: 2vh;
+  font-weight: 500;
+}
+
+.slideLink {
+  background-color: var(--color-green);
+  color: white;
+  font-size: 1em;
+}
+
+.slideLink a {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.controlBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controlPanel {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.controlBtn button svg {
+  font-size: 1.5em;
+}
+
+.controlBtn button {
+  background-color: white;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .swiperImage {
+    height: 60vh;
+  }
+
+  .slideTitle {
+    padding-top: 15vh;
+  }
+
+  .slideTitle h1 {
+    font-size: 4em;
+  }
+  .slideTitle h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiperImage {
+    height: 80vh;
+  }
+
+  .slideTitle {
+    padding-top: 20vh;
+  }
+
+  .slideTitle h1 {
+    font-size: 5em;
+  }
+  .slideTitle h2 {
+    font-size: 3em;
+  }
+}

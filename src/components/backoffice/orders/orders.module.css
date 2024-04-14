@@ -1,0 +1,130 @@
+.orders {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 10vh;
+
+  gap: 5em;
+}
+
+.ordersContainer {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  margin-top: 10vh;
+
+  gap: 3em;
+}
+
+.order {
+
+
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 3em;
+  border: 1px solid #000;
+
+  gap: 1em;
+}
+
+.order h3 {
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.2em;
+}
+
+.order p {
+
+  margin: 5px 0;
+  padding: 0;
+
+  font-size: 1em;
+}
+
+.product {
+
+  margin-left: 10px;
+}
+
+.order button {
+
+  display: inline-block;
+
+  width: 50%;
+  margin: 4px 2px;
+  padding: 1em 2em;
+  border: 1px solid rgb(168, 168, 168);
+  background-color: var(--color-green);
+
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+
+  cursor: pointer;
+}
+
+/* FORM */
+
+.createOrder {
+
+  display: flex;
+  flex-direction: column;
+
+ margin-left: 5vw;
+  padding: 2em;
+
+  gap: 10px;
+ 
+}
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2em;
+  border: 1px solid grey;
+
+  gap: 10px;
+  
+}
+
+.input {
+
+  padding: 10px;
+  border: 1px solid #3f3f3f;
+  border-radius: 5px;
+}
+
+.box {
+
+  display: flex;
+
+  gap: 10px;
+}
+
+.button {
+
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 5px;
+  background-color: var(--color-green);
+
+  color: rgb(255, 255, 255);
+
+  cursor: pointer;
+}

@@ -1,0 +1,62 @@
+.container {
+
+  padding: 2em;
+}
+
+.container h3{
+
+    margin-top: 20vh;
+}
+
+.contact {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 2vh;
+  border-bottom: 1px solid black;
+}
+
+.contact button{
+    background-color: var(--color-green);
+    padding: 1em;
+    color: white;
+    border: none;
+}
+
+
+
+.form {
+;
+  margin-top: 20px;
+}
+
+.form label {
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.form input,
+.form textarea {
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form button {
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-green);
+
+  color: white;
+
+  cursor: pointer;
+}

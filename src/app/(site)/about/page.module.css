@@ -1,0 +1,38 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+
+.partners h2,
+.partners h3 {
+  font-size: 2.5em;
+}
+
+.partners h3{
+    font-weight: 400;
+    margin-bottom: 2vh;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .partners{
+    margin-top: 20vh;
+  }
+
+  .partners p {
+    width: 50%;
+  }
+
+}

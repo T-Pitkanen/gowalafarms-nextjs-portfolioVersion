@@ -1,0 +1,106 @@
+.container {
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 99999;
+}
+
+.item {
+  border-bottom: 1px solid #ebebeb;
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.item img {
+  border-radius: 10px;
+}
+
+.title {
+  width: 60px;
+  font-weight: bolder;
+}
+
+.totalPrice {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: #000;
+  border-bottom: 1px solid white;
+  padding-bottom: 1vh;
+}
+
+.removeBtn {
+  background-color: var(--color-green);
+  padding: 0.35rem;
+  color: white;
+  border-radius: 20px;
+  font-size: 11px;
+  border: none;
+}
+
+.addBtn,
+.decreaseBtn {
+  background-color: var(--color-green);
+  padding: 0.1rem 0.35rem;
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  border: none;
+}
+
+.checkout {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.checkout button {
+  border: none;
+  background-color: var(--color-green);
+  color: white;
+  width: auto;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 2vh 1vw;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .item {
+    padding: 0.5rem 1em;
+  }
+
+  .item span {
+    font-weight: 700;
+  }
+
+  .title {
+    width: 20%;
+  }
+
+  .addBtn,
+  .decreaseBtn {
+    border-radius: 20px;
+    font-size: 17px;
+  }
+}

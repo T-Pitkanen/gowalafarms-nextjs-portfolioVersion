@@ -1,0 +1,1454 @@
+{
+	"info": {
+		"_postman_id": "ad41480d-3e30-453d-961f-06055a6c4a54",
+		"name": "MCDM - Gowala Farms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17346811",
+		"_collection_link": "https://mcdmviborg.postman.co/workspace/MCDM-Boiler-Templates~3a083f64-8a60-4d6e-bb07-860691da039a/collection/17346811-ad41480d-3e30-453d-961f-06055a6c4a54?action=share&source=collection_link&creator=17346811"
+	},
+	"item": [
+		{
+			"name": "(sponsors)",
+			"item": [
+				{
+					"name": "sponsors",
+					"item": [
+						{
+							"name": "Get Sponsors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/sponsors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"sponsors"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sponsor",
+					"item": [
+						{
+							"name": "Add Sponsor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Sponsor One",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/sponsor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"sponsor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Sponsor",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "6613073ce795a736c927db90",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Sponsor One Updated d",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/gowala/gowalafarms-nextjs-web/public/sponsors/sponsor_373395235.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/sponsor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"sponsor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Sponsor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/sponsor?id=6613073ce795a736c927db90",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"sponsor"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6613073ce795a736c927db90"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get SponsorBy ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/sponsor?id=661304796d47efd7b654eb9d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"sponsor"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "661304796d47efd7b654eb9d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(employees)",
+			"item": [
+				{
+					"name": "employees",
+					"item": [
+						{
+							"name": "Get Employees",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "employee",
+					"item": [
+						{
+							"name": "Get Employee ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/employee?id=661308c9e795a736c927db99",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "661308c9e795a736c927db99"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Employee",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Super Employee",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "position",
+											"value": "Up Right",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Description of Employee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/employee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Employee",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "661308c9e795a736c927db99",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/gowala/gowalafarms-nextjs-web/public/employees/08.jpg"
+										},
+										{
+											"key": "position",
+											"value": "Updated Position",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Updated Description",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Anders",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/employee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Employee",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/employee?id=661308c9e795a736c927db99",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "661308c9e795a736c927db99"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(subscribers)",
+			"item": [
+				{
+					"name": "Subscribers",
+					"item": [
+						{
+							"name": "Get Subscribers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscribers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscribers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subscriber",
+					"item": [
+						{
+							"name": "Add Subscriber",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"name\": \"Media Man\",\r\n        \"email\": \"media@mediacollege.dk\",\r\n        \"message\": \"Jeg er en subscriber\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Subscriber",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Anders Christensen\",\r\n    \"validated\" : true,\r\n    \"id\" : \"66130a33e795a736c927dba2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Subscriber",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?id=66130a33e795a736c927dba2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130a33e795a736c927dba2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscriber By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?id=66130a33e795a736c927dba2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130a33e795a736c927dba2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscriber By Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?email=media@mediacollege.dk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "media@mediacollege.dk"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(products)",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Get Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Products By ID Range",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/products?range=661304796d47efd7b654eb95,661304796d47efd7b654eb97",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "range",
+											"value": "661304796d47efd7b654eb95,661304796d47efd7b654eb97"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Get Product By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product?id=661304796d47efd7b654eb97",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "661304796d47efd7b654eb97"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Milk in a jar",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10.50",
+											"type": "text"
+										},
+										{
+											"key": "discountInPercent",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "exclusive",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "description",
+											"value": "A description of milk in a jar",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "66130bc7e795a736c927dbaf",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Milk Update",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100.11",
+											"type": "text"
+										},
+										{
+											"key": "discountInPercent",
+											"value": "22",
+											"type": "text"
+										},
+										{
+											"key": "exclusive",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/gowala/gowalafarms-nextjs-web/public/products/product_14.jpg"
+										},
+										{
+											"key": "description",
+											"value": "Updated Description",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product?id=66130bc7e795a736c927dbaf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130bc7e795a736c927dbaf"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(articles)",
+			"item": [
+				{
+					"name": "articles",
+					"item": [
+						{
+							"name": "Get Articles By Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/articles?category=all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "all"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Articles For Services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/articles?category=services",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "services"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Articles For About",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/articles?category=about",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "about"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(faqs)",
+			"item": [
+				{
+					"name": "Faqs",
+					"item": [
+						{
+							"name": "Get Faqs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/faqs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faqs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Faqs With a Limit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/faqs?limit=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faqs"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Faq",
+					"item": [
+						{
+							"name": "Get Faq By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/faq?id=66130c91e795a736c927dbbe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faq"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130c91e795a736c927dbbe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add FAQ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question\": \"Add new Question?\",\r\n    \"answer\": \"And add an answer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/faq",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faq"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update FAQ",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"66130c91e795a736c927dbbe\",\r\n    \"question\": \"Update the Question\",\r\n    \"answer\": \"Maybe with a different answer.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/faq",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faq"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Faq",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/faq?id=66130c91e795a736c927dbbe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"faq"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130c91e795a736c927dbbe"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(basket)",
+			"item": [
+				{
+					"name": "basket",
+					"item": [
+						{
+							"name": "Add Basket",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"anders@mediacollege.dk\",\r\n    \"products\" : [{\r\n        \"id\" : \"65faf75b76c3a3e610f12c35\",\r\n        \"amount\" : 2\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/basket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"basket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Basket",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/basket?email=anders@mediacollege.dk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"basket"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "anders@mediacollege.dk"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Basket",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/basket?email=anders@mediacollege.dk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"basket"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "anders@mediacollege.dk"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Basket",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"anders@mediacollege.dk\",\r\n    \"products\" : [{\r\n            \"id\": \"65faf75b76c3a3e610f12c35\",\r\n            \"amount\": 22\r\n        }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/basket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"basket"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(orders)",
+			"item": [
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "Get Orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Get Order By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/order?id=66129839165feda11db784eb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66129839165feda11db784eb"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Order By Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/order?email=anders@mediacollege.dk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "anders@mediacollege.dk"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"products\": [{\r\n        \"id\": \"66129839165feda11db784d1\",\r\n        \"amount\" : 2\r\n    }],\r\n    \"email\" : \"frederik@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"66130d2ce795a736c927dbd1\",\r\n    \"products\": [{\r\n        \"id\": \"66129839165feda11db784d1\",\r\n        \"amount\" : 14\r\n    }],\r\n    \"email\" : \"frederik@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"products\": [{\r\n        \"id\": \"65e4a233f040254fec6d08d1\",\r\n        \"amount\" : 2\r\n    }],\r\n    \"email\" : \"frederik@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order?id=66130d2ce795a736c927dbd1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130d2ce795a736c927dbd1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(services)",
+			"item": [
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "Get All services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/services",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"services"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(contacts)",
+			"item": [
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "Add new contact message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Anders C\",\r\n    \"email\" : \"mcs@mediacollege.dk\",\r\n    \"phone\" : \"12345678\",\r\n    \"message\" : \"One more message sss\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/contact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Contact By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/contact?id=66130d88e795a736c927dbdc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contact"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "66130d88e795a736c927dbdc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contacts",
+					"item": [
+						{
+							"name": "Get all contacts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/contacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

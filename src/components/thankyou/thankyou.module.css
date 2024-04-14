@@ -1,0 +1,49 @@
+.page {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.container button {
+  display: inline-block;
+
+  width: auto;
+  margin: 4px 2px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-green);
+
+  font-size: 19px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 5vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .page {
+    margin-top: 0vh;
+    padding-top: 20vh;
+  }
+
+  .container {
+    font-size: 1.5em;
+  }
+}

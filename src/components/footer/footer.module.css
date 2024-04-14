@@ -1,0 +1,94 @@
+.footer {
+  background-image: url("/footer/footer_bg.jpg");
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.footerBody {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.footerMid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.footerText p {
+  width: 90%;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.social {
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.phone,
+.time,
+.address {
+  display: flex;
+}
+
+.icon {
+  color: var(--color-green);
+  font-size: 2em;
+  margin: 0 10px;
+}
+
+.icon:hover {
+  transition: all 0.2s ease-in-out;
+  color: var(--green-color);
+  cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.copyright p {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  margin: 5px 0;
+  color: black;
+  width: 80%;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.copyright span {
+  color: var(--color-green);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+  }
+}

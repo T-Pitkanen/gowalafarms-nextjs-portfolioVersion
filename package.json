@@ -1,0 +1,35 @@
+{
+  "name": "gowalafarms-nextjs-exam",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "node -r dotenv/config ./src/lib/db/seed/seeddb.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.540.0",
+    "@uidotdev/usehooks": "^2.4.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.13",
+    "formik": "^2.4.5",
+    "mongoose": "^8.2.2",
+    "next": "14.1.3",
+    "react": "^18",
+    "react-content-loader": "^7.0.0",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "react-spinners": "^0.13.8",
+    "swiper": "^11.0.7",
+    "yup": "^1.4.0"
+  },
+  "description": "```\r Author      : Media College Viborg.\r Date        : 2024\r Description : Project Bootstrapping.\r ```",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

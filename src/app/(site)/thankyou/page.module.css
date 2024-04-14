@@ -1,0 +1,19 @@
+.page{
+    margin-top: 20vh;
+    margin-bottom: 40vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .page{
+      margin-top: 0vh;
+      /* padding: 10vh 0; */
+    }
+  
+
+  }

@@ -1,0 +1,104 @@
+.container {
+
+  width: 100%;
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+.subscribersTable {
+
+  width: 100%;
+  margin-bottom: 10vh;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.subscribersTable th,
+.subscribersTable td {
+
+  padding: 8px;
+  border: 1px solid #ddd;
+
+  text-align: left;
+}
+
+.subscribersTable th {
+
+  background-color: #f2f2f2;
+
+  color: black;
+}
+
+.container h3 {
+
+  margin: 10vh 0 5vh 0;
+
+  font-size: 2em;
+}
+
+.subscribersTable tr:nth-child(even) {
+
+  background-color: #f2f2f2;
+}
+
+.subscribersTable tr:hover {
+
+  background-color: #ddd;
+}
+
+.subscribersTable button {
+
+  display: inline-block;
+
+  margin: 4px 2px;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--color-green);
+
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+}
+
+.subForm {
+
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2em;
+}
+
+.subForm label {
+
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 700;
+}
+
+.subForm input {
+
+  padding: 1em;
+}
+
+.subForm button {
+
+  display: inline-block;
+
+  margin: 4px 2px;
+  padding: 1em;
+  border: none;
+  background-color: var(--color-green);
+
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+}

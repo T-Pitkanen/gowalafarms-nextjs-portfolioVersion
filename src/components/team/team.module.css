@@ -1,0 +1,80 @@
+.container {
+  margin: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  width: 100%;
+}
+
+.card img{
+    object-fit: fill;
+    height: auto;
+    width: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  box-shadow: 0px 6px 6px #08040429;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.911);
+  width: 80%;
+  margin-bottom: 2vh;
+  color: black;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 3px 6px 6px #00000029;
+}
+
+.overlay h2,
+.overlay h3 {
+  font-size: 1.25em;
+
+}
+
+.overlayIcon{
+  padding-top: 1vh;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.overlay p {
+  font-size: 0.75em;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10vh;
+    padding: 10vh 0;
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-image: url('/blobs/blob_02.jpg');
+   background-size: cover;
+  }
+
+  .card {
+  
+    width: auto;
+   
+  }
+
+  .card img{
+    object-fit: fill;
+    height: auto;
+    width: 275px;
+}
+}

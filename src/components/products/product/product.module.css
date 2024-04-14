@@ -1,0 +1,134 @@
+.productContainer {
+  width: 70vw;
+  padding: 1em;
+  background-color: #eff4f8;
+  border: 3px solid white;
+  box-shadow: 0 6px 6px #ebebeb;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+
+.productImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.prices p {
+  font-size: 2.25em;
+  font-weight: 700;
+  color: var(--color-green);
+  margin: 2vh 0;
+  text-align: center;
+}
+
+.prices s {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.detailsSecond {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 0.75em;
+  margin-top: 2vh;
+}
+
+.orderBtn {
+  background-color: var(--color-green);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.discountBanner {
+  position: absolute;
+  margin-top: 2vh;
+  left: 60vw;
+  border-radius: 10px;
+  padding: 0.75em;
+  background-color: var(--color-green);
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .productImg {
+    height: 125px;
+  }
+
+  .productContainer {
+    height: auto;
+    width: 250px;
+    padding: 1em 2em;
+  }
+
+  .detailContainer {
+    gap: 1em;
+  }
+
+  .product {
+    gap: 2em;
+  }
+
+  .productContainerList {
+    width: 100%;
+  }
+
+  .productList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .productList img {
+    width: 150px;
+  }
+
+  .productList .detailContainer {
+    align-items: flex-start;
+    text-align: left;
+    gap: 0em;
+  }
+
+  .discountBanner {
+    left: 22vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .discountBanner {
+    left: 19vw;
+    margin-top: -1vh;
+  }
+}
