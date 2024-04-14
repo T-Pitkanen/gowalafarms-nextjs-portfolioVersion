@@ -8,6 +8,10 @@
 # IDE
 .vscode
 
+
+#lib
+/lib
+
 # testing
 /coverage
 
