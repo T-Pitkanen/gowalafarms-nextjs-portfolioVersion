@@ -1,35 +1,33 @@
 .orders {
-
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: flex-start;
 
-  margin-top: 10vh;
+  margin-top: 5vh;
 
   gap: 5em;
 }
 
 .ordersContainer {
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
 
-  margin-top: 10vh;
+  margin-top: 5vh;
 
-  gap: 3em;
+  gap: 10em;
 }
 
 .order {
-
-
   display: flex;
   flex-direction: column;
 
   width: auto;
-  height: auto;
+  height: 600px;
+  overflow: scroll;
   margin-bottom: 10px;
   padding: 3em;
   border: 1px solid #000;
@@ -38,7 +36,6 @@
 }
 
 .order h3 {
-
   margin: 0;
   padding: 0;
 
@@ -46,20 +43,28 @@
 }
 
 .order p {
-
   margin: 5px 0;
   padding: 0;
 
   font-size: 1em;
 }
 
-.product {
 
-  margin-left: 10px;
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border: 1px solid #ddd;
+  padding: 1.5em;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.order button {
 
+
+
+.order button {
   display: inline-block;
 
   width: 50%;
@@ -80,19 +85,11 @@
 /* FORM */
 
 .createOrder {
-
   display: flex;
   flex-direction: column;
-
- margin-left: 5vw;
-  padding: 2em;
-
-  gap: 10px;
- 
 }
 
 .form {
-
   display: flex;
   flex-direction: column;
 
@@ -100,31 +97,33 @@
   border: 1px solid grey;
 
   gap: 10px;
-  
 }
 
 .input {
-
   padding: 10px;
   border: 1px solid #3f3f3f;
   border-radius: 5px;
 }
 
 .box {
-
   display: flex;
 
   gap: 10px;
 }
 
 .button {
-
-  padding: 10px 20px;
+  padding: 20px 30px;
   border: 1px solid rgb(99, 99, 99);
   border-radius: 5px;
   background-color: var(--color-green);
-
+  font-size: 1em;
   color: rgb(255, 255, 255);
 
   cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }

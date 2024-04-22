@@ -4,10 +4,14 @@
         "products": [
             {
                 "id": "6613bba94d98def4dfba5ebc",
+                "title": "Gowala Cheese",
+                "imagePath": "/products/product_01.jpg",
                 "amount": 1
             },
             {
                 "id": "6613bba94d98def4dfba5ebe",
+                "title": "Farm Fresh Butter",
+                "imagePath": "/products/product_04.jpg",
                 "amount": 1
             }
         ],
@@ -21,14 +25,20 @@
         "products": [
             {
                 "id": "6613bba94d98def4dfba5ebc",
+                "title": "Gowala Cheese",
+                "imagePath": "/products/product_01.jpg",
                 "amount": 2
             },
             {
                 "id": "6613bba94d98def4dfba5ec2",
+                "title": "Heritage Cheese Rolls",
+                "imagePath": "/products/product_02.jpg",
                 "amount": 3
             },
             {
                 "id": "6613bba94d98def4dfba5ec0",
+                "title": "Velvet Cream",
+                "imagePath": "/products/product_03.jpg",
                 "amount": 2
             }
         ],
@@ -42,14 +52,20 @@
         "products": [
             {
                 "id": "6613bba94d98def4dfba5ebc",
+                "title": "Gowala Cheese",
+                "imagePath": "/products/product_01.jpg",
                 "amount": 2
             },
             {
                 "id": "6613bba94d98def4dfba5ec2",
+                "title": " Heritage Cheese Rolls",
+                "imagePath": "/products/product_02.jpg",
                 "amount": 3
             },
             {
                 "id": "6613bba94d98def4dfba5ec0",
+                "title": "Velvet Cream",
+                "imagePath": "/products/product_03.jpg",
                 "amount": 2
             }
         ],
@@ -63,10 +79,14 @@
         "products": [
             {
                 "id": "6613bba94d98def4dfba5ebc",
+                "title": "Gowala Cheese",
+                "imagePath": "/products/product_01.jpg",
                 "amount": "3"
             },
             {
                 "id": "6613bba94d98def4dfba5ec2",
+                "title": " Heritage Cheese Rolls",
+                "imagePath": "/products/product_02.jpg",
                 "amount": "1"
             }
         ],
@@ -80,10 +100,14 @@
         "products": [
             {
                 "id": "6613bba94d98def4dfba5ebe",
+                "title": "Farm Fresh Butter",
+                "imagePath": "/products/product_04.jpg",
                 "amount": 1
             },
             {
                 "id": "6613bba94d98def4dfba5ec0",
+                "title": "Velvet Cream",
+                "imagePath": "/products/product_03.jpg",
                 "amount": 1
             }
         ],

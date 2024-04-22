@@ -3,9 +3,17 @@ import { useEffect, useState } from "react";
 import styles from "./employees.module.css";
 import Image from "next/image";
 import employeesData from "../../../data/employees.json";
+import ModalNew from "../modals/modalEmployees/new/modal";
+import ModalUpdate from "../modals/modalEmployees/update/modal";
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [updateModalIsOpen, setUpdateModalIsOpen] = useState(false);
+  const [id, setId] = useState(null);
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [position, setPosition] = useState("");
 
   const getEmployees = () => {
     setEmployees(employeesData);
@@ -14,6 +22,33 @@ const Employees = () => {
   useEffect(() => {
     getEmployees();
   }, []);
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+
+    console.log("Updating employee:", { name, description, position });
+
+    setModalIsOpen(false);
+  };
+
+  const handleCreate = () => {
+    setModalIsOpen(true);
+  };
+
+
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setUpdateModalIsOpen(false);
+  };
+
+  const handleEdit = (employee) => {
+    setId(employee._id);
+    setName(employee.name);
+    setDescription(employee.description);
+    setPosition(employee.position);
+    setUpdateModalIsOpen(true);
+  };
 
   /* ORIGINAL
   const getEmployees = async () => {
@@ -115,6 +150,9 @@ const Employees = () => {
 
   return (
     <div className={styles.container}>
+      <button className={styles.newBtn} onClick={handleCreate}>
+        Create New
+      </button>
       <div className={styles.employees}>
         {employees.map((employee, index) => {
           return (
@@ -126,7 +164,6 @@ const Employees = () => {
                 width={500}
                 height={500}
               />
-              <p>{employee._id}</p>
               <p>
                 <b>{employee.name}</b>
               </p>
@@ -135,71 +172,43 @@ const Employees = () => {
               <p>
                 <b>{employee.position}</b>
               </p>
-              <button onClick={(e) => handleDelete(e, employee._id)}>
-                Delete
-              </button>
+              <div className={styles.actionBtn}>
+                {" "}
+               
+                <button onClick={() => handleEdit(employee)}>Edit</button>
+                <button>
+                  Delete
+                </button>
+              </div>
             </span>
           );
         })}
       </div>
 
-      <h3>Add New</h3>
+      <ModalNew
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+        name={name}
+        description={description}
+        position={position}
+        handleUpdate={handleUpdate}
+        setName={setName}
+        setDescription={setDescription}
+        setPosition={setPosition}
+      />
 
-      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
-      <form className={styles.form}>
-        <label>
-          {" "}
-          Name
-          <input type="name" name="name" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Position
-          <input type="position" name="position" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Description
-          <textarea type="text" name="description" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Employee Image
-          <input type="file" name="file" placeholder="Select File" />
-        </label>
-        <button>Upload</button>
-      </form>
-
-      <h3>Update</h3>
-
-      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
-      <form className={styles.form}>
-        <label>
-          ID:
-          <input type="text" name="id" defaultValue={""} />
-        </label>
-        <label>
-          Name:
-          <input type="text" name="name" defaultValue={""} />
-        </label>
-        <label>
-          Position:
-          <input type="text" name="position" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Description
-          <textarea type="text" name="description" defaultValue={""} />
-        </label>
-
-        <label>
-          {" "}
-          Employee Image
-          <input type="file" name="file" placeholder="Select File" />
-        </label>
-
-        <button>Update</button>
-      </form>
+      <ModalUpdate
+        modalIsOpen={updateModalIsOpen}
+        closeModal={closeModal}
+        id={id}
+        name={name}
+        description={description}
+        position={position}
+        handleUpdate={handleUpdate}
+        setName={setName}
+        setDescription={setDescription}
+        setPosition={setPosition}
+      />
     </div>
   );
 };

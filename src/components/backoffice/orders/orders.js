@@ -2,6 +2,11 @@
 import { useEffect, useState } from "react";
 import styles from "./orders.module.css";
 import ordersData from "../../../data/orders.json";
+import ModalNew from "../modals/modalOrders/new/newModal";
+import ModalUpdate from "../modals/modalOrders/update/modal";
+
+import Image from "next/image";
+
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [newOrder, setNewOrder] = useState({
@@ -9,14 +14,40 @@ const Orders = () => {
     products: [{ id: "", amount: "" }],
   });
 
-  
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [updateModalIsOpen, setUpdateModalIsOpen] = useState(false);
+  const [orderToUpdate, setOrderToUpdate] = useState(null);
+
   const getOrders = () => {
     setOrders(ordersData);
   };
-  
+
   useEffect(() => {
     getOrders();
   }, []);
+
+  const handleCreate = (e) => {
+    e.preventDefault();
+  
+    setSelectedProducts([]);
+    setSelectedProduct(null);
+    setQuantity(1);
+
+    setModalIsOpen(false);
+  };
+
+  const handleUpdateClick = (order) => {
+    setOrderToUpdate(order);
+    setUpdateModalIsOpen(true);
+  };
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+  
+    setUpdateModalIsOpen(false);
+   
+  };
 
   /* ORIGINAL
   //GET
@@ -84,65 +115,13 @@ const Orders = () => {
   return (
     <div className={styles.orders}>
       <div className={styles.createOrder}>
-        {/* <form onSubmit={handleNewOrderSubmit} className={styles.form}> */}
-        <form  className={styles.form}>
-          <h2>Create Order</h2>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            onChange={(e) =>
-              setNewOrder({ ...newOrder, email: e.target.value })
-            }
-            className={styles.input}
-          />
-          {newOrder.products.map((x, i) => {
-            return (
-              <div className={styles.box} key={i}>
-                {/* <input
-                  name="id"
-                  placeholder="Product ID"
-                  value={x.id}
-                  onChange={(e) => handleNewOrderChange(e, i)}
-                  className={styles.input}
-                />
-                <input
-                  name="amount"
-                  placeholder="Amount"
-                  value={x.amount}
-                  onChange={(e) => handleNewOrderChange(e, i)}
-                  className={styles.input}
-                /> */}
-                <input
-                  name="id"
-                  placeholder="Product ID"
-                  value={x.id}
-                  
-                  className={styles.input}
-                />
-                <input
-                  name="amount"
-                  placeholder="Amount"
-                  value={x.amount}
-                
-                  className={styles.input}
-                />
-              </div>
-            );
-          })}
-          {/* <button type="button" onClick={addProduct} className={styles.button}>
-            Add Product
-          </button> */}
-          <button type="button" className={styles.button}>
-            Add Product
-          </button>
-          {/* <button type="submit" className={styles.button}>
-            Create Order
-          </button> */}
-          <button type="button" className={styles.button}>
-            Create Order
-          </button>
-        </form>
+        <button
+          type="button"
+          onClick={() => setModalIsOpen(true)}
+          className={styles.button}
+        >
+          Create Order
+        </button>
       </div>
       <div className={styles.ordersContainer}>
         {orders.map((order, index) => {
@@ -159,9 +138,13 @@ const Orders = () => {
               {order.products.map((product, productIndex) => {
                 return (
                   <div className={styles.product} key={productIndex}>
-                    <p>
-                      <b>Product ID:</b> {product.id}
-                    </p>
+                    <Image
+                      src={product.imagePath}
+                      alt={product.title}
+                      width={100}
+                      height={100}
+                    />
+                    <p>{product.title}</p>
                     <p>
                       <b>Amount:</b> {product.amount}
                     </p>
@@ -174,13 +157,28 @@ const Orders = () => {
               {/* <button onClick={() => handleDelete(order._id)}>
                 Delete
               </button> */}
-              <button>
-                Delete
-              </button>
+              <button onClick={() => handleUpdateClick(order)}>Update</button>
+              <button>Delete</button>
             </div>
           );
         })}
       </div>
+
+      <ModalNew
+        modalIsOpen={modalIsOpen}
+        closeModal={() => setModalIsOpen(false)}
+        email={newOrder.email}
+        handleCreate={handleCreate}
+        setEmail={(email) => setNewOrder({ ...newOrder, email })}
+      />
+
+      <ModalUpdate
+        modalIsOpen={updateModalIsOpen}
+        closeModal={() => setUpdateModalIsOpen(false)}
+        order={orderToUpdate}
+        handleUpdate={handleUpdate}
+        setOrder={setOrderToUpdate}
+      />
     </div>
   );
 };

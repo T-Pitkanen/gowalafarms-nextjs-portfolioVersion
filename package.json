@@ -23,13 +23,14 @@
     "react-content-loader": "^7.0.0",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "react-modal": "^3.16.1",
+    "react-select": "^5.8.0",
     "react-spinners": "^0.13.8",
     "swiper": "^11.0.7",
     "yup": "^1.4.0"
   },
   "description": "```\r Author      : Media College Viborg.\r Date        : 2024\r Description : Project Bootstrapping.\r ```",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }

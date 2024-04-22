@@ -3,13 +3,44 @@
 import styles from "./faq.module.css";
 import { useState, useEffect } from "react";
 import faqData from "../../../data/faq.json";
+import ModalFaq from "../modals/modalFaq/modal";
+import ModalFaqNew from "../modals/modalFaq/newModal";
 
 const Faqs = () => {
   const [faqs, setFaqs] = useState([]);
   const [id, setId] = useState("");
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  const [createModalIsOpen, setCreateModalIsOpen] = useState(false);
+  const [editModalIsOpen, setEditModalIsOpen] = useState(false);
+
+
+  const handleCreateOpen = () => {
+    setQuestion("");
+    setAnswer("");
+    setCreateModalIsOpen(true);
+  };
+
+  const handleEdit = (faq) => {
+    setId(faq._id);
+    setQuestion(faq.question);
+    setAnswer(faq.answer);
+    setEditModalIsOpen(true);
+  };
+
+  const handleCreate = (event) => {
+    event.preventDefault();
+    setQuestion("");
+    setAnswer("");
+    setCreateModalIsOpen(false);
+  };
+
+  const handleUpdate = (event) => {
+    event.preventDefault();
+    setCreateModalIsOpen(false);
+  };
 
   const getFaqs = () => {
     setFaqs(faqData);
@@ -104,7 +135,11 @@ const Faqs = () => {
 
   return (
     <div className={styles.container}>
-      <h2>F.A.Qs</h2>
+      <div className={styles.faqHeader}>
+        {" "}
+        <h2>F.A.Qs</h2> <button onClick={handleCreateOpen}>Create New</button>
+      </div>
+
       <div className={styles.faq}>
         {faqs.map((faq, index) => {
           return (
@@ -116,68 +151,37 @@ const Faqs = () => {
                 <b>{faq.question}</b>
               </p>
               <p>{faq.answer}</p>
-              {/* <button onClick={(e) => handleDelete(e, faq._id)}>Delete</button> */}
-              <button>Delete</button>
+              <button onClick={() => handleEdit(faq)}>Edit</button>
+              <button onClick={(e) => handleDelete(e, faq._id)}>Delete</button>
+              
             </span>
           );
         })}
       </div>
+      <ModalFaqNew
+        modalIsOpen={createModalIsOpen}
+        closeModal={() => setCreateModalIsOpen(false)}
+        id={""}
+        question={question}
+        answer={answer}
+        handleCreate={handleCreate}
+        setQuestion={setQuestion}
+        setAnswer={setAnswer}
+      />
 
-      <h3>Add New</h3>
-
-      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
-      <form className={styles.form}>
-        <label>
-          Question?
-          <input type="question" name="question" defaultValue={""} />
-        </label>
-
-        <label>
-          Answer
-          <textarea type="answer" name="answer" defaultValue={""} />
-        </label>
-
-        <button>Upload</button>
-      </form>
-
-      <h3>Update</h3>
-
-      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
-      <form className={styles.form}>
-        <label>
-          ID:
-          <input
-            type="text"
-            name="id"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-          />
-        </label>
-
-        <label>
-          Question:
-          <input
-            type="text"
-            name="question"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-          />
-        </label>
-
-        <label>
-          Answer:
-          <textarea
-            type="text"
-            name="answer"
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-          />
-        </label>
-
-        <button>Update</button>
-      </form>
+      <ModalFaq
+        modalIsOpen={editModalIsOpen}
+        closeModal={() => setEditModalIsOpen(false)}
+        id={id}
+        question={question}
+        answer={answer}
+        handleUpdate={handleUpdate}
+        setQuestion={setQuestion}
+        setAnswer={setAnswer}
+      />
     </div>
   );
 };
 
 export default Faqs;
+

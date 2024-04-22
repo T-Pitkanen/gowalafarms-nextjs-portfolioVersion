@@ -2,17 +2,42 @@
 import { useEffect, useState } from "react";
 import styles from "./subscribers.module.css";
 import subscriberData from "../../../data/subscribers.json";
+import ModalNew from "../modals/modalSubs/new/newModal";
+import ModalUpdate from "../modals/modalSubs/update/modal";
 
 const Subscribers = () => {
   const [subscribers, setSubscribers] = useState([]);
+  const [createModalIsOpen, setCreateModalIsOpen] = useState(false);
+  const [editModalIsOpen, setEditModalIsOpen] = useState(false);
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [validated, setValidated] = useState(false);
 
   const getSubscribers = () => {
     setSubscribers(subscriberData);
   };
-  
+
   useEffect(() => {
     getSubscribers();
   }, []);
+
+  const handleCreate = (e) => {
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setMessage("");
+    setValidated(false);
+    setCreateModalIsOpen(false);
+  };
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+
+    setValidated(false);
+    setEditModalIsOpen(false);
+  };
 
   /* original
   //READ
@@ -126,11 +151,16 @@ const Subscribers = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Subscribers</h2>
+      <div className={styles.header}>
+        {" "}
+        <h2>Subscribers</h2>
+        <button onClick={() => setCreateModalIsOpen(true)}>Create New</button>
+      </div>
+
       <table className={styles.subscribersTable}>
         <thead>
           <tr>
-		  <th>ID</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
@@ -148,13 +178,19 @@ const Subscribers = () => {
                 <td>{subscriber.message}</td>
                 <td>{subscriber.validated ? "Yes" : "No"}</td>
 
-                <td>
+                <td className={styles.actions}>
                   {/* <button onClick={(e) => handleDelete(e, subscriber._id)}>
                     Delete
                   </button> */}
-                  <button>
-                    Delete
+
+                  <button
+                    onClick={() => {
+                      setEditModalIsOpen(true);
+                    }}
+                  >
+                    Update
                   </button>
+                  <button>Delete</button>
                 </td>
               </tr>
             );
@@ -162,100 +198,37 @@ const Subscribers = () => {
         </tbody>
       </table>
 
-      <h3>Add New</h3>
+     
 
-      {/* <form className={styles.subForm} onSubmit={handleSubmit}> */}
-     <form className={styles.subForm}> 
-        <label>
-          {" "}
-          Name
-          <input
-            type="name"
-            name="name"
-            placeholder="Enter Name"
-            defaultValue={""}
-          />
-        </label>
-        <label>
-          {" "}
-          Email
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email"
-            defaultValue={""}
-          />
-        </label>
+      <ModalNew
+        modalIsOpen={createModalIsOpen}
+        closeModal={() => setCreateModalIsOpen(false)}
+        name={name}
+        email={email}
+        message={message}
+        validated={validated}
+        handleCreate={handleCreate}
+        setName={setName}
+        setEmail={setEmail}
+        setMessage={setMessage}
+        setValidated={setValidated}
+      />
 
-		
-       
-        <label>
-          {" "}
-          Text
-          <textarea
-            type="message"
-            name="message"
-            placeholder="Enter Message"
-            defaultValue={""}
-          />
-        </label>
-
-		<label>
-          Validated:
-          <input type="checkbox" name="validated" />
-        </label>
-
-        <button>Add New Subscriber</button>
-      </form>
-
-      <h3>Update</h3>
-
-      {/* <form className={styles.subForm} onSubmit={handleUpdate}> */}
-      <form className={styles.subForm}> 
-        <label>
-          ID:
-          <input
-            type="text"
-            name="id"
-            placeholder="Enter ID"
-            defaultValue={""}
-          />
-        </label>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Name"
-            defaultValue={""}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            placeholder="Enter Email"
-            defaultValue={""}
-          />
-        </label>
-		<label>
-          {" "}
-          Message
-          <textarea
-            type="text"
-            name="message"
-            placeholder="Enter Message"
-            defaultValue={""}
-          />
-        </label>
-        <label>
-          Validated:
-          <input type="checkbox" name="validated" />
-        </label>
-
-        <button>Update</button>
-      </form>
+      <ModalUpdate
+        modalIsOpen={editModalIsOpen}
+        closeModal={() => setEditModalIsOpen(false)}
+        id={id}
+        name={name}
+        email={email}
+        message={message}
+        validated={validated}
+        handleUpdate={handleUpdate}
+        setId={setId}
+        setName={setName}
+        setEmail={setEmail}
+        setMessage={setMessage}
+        setValidated={setValidated}
+      />
     </div>
   );
 };

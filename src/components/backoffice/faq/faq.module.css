@@ -13,6 +13,23 @@
   margin-top: 10vh;
 }
 
+.faqHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.faqHeader button {
+  padding: 1em;
+  border: none;
+  background-color: var(--color-green);
+
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
 .faq {
 
 
