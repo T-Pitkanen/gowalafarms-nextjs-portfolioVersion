@@ -153,8 +153,8 @@ const Subscribers = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         {" "}
-        <h2>Subscribers</h2>
-        <button onClick={() => setCreateModalIsOpen(true)}>Create New</button>
+        <h2>Edit Subscribers</h2>
+        <button onClick={() => setCreateModalIsOpen(true)}>Create New Subscriber</button>
       </div>
 
       <table className={styles.subscribersTable}>

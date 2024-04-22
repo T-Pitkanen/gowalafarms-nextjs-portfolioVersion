@@ -5,7 +5,7 @@ import Contact from "@/components/backoffice/contact/contact";
 export default function ContactPage() {
   return (
     <div className={styles.page}>
-      <h1>Edit Contacts</h1>
+      <h1>Messages</h1>
       <Contact />
     </div>
   );

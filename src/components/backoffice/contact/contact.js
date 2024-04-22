@@ -108,33 +108,6 @@ const Contact = () => {
         </div>
       ))}
 
-      <h3>Add New</h3>
-
-      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
-      <form className={styles.form}>
-        <label>
-          {" "}
-          Name
-          <input type="text" name="name" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Email
-          <input type="text" name="email" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Phone
-          <input type="text" name="phone" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Message
-          <textarea type="text" name="message" defaultValue={""} />
-        </label>
-
-        <button>Upload</button>
-      </form>
     </div>
   );
 };

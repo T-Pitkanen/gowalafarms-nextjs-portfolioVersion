@@ -23,6 +23,8 @@ const Employees = () => {
     getEmployees();
   }, []);
 
+  
+
   const handleUpdate = (e) => {
     e.preventDefault();
 
@@ -151,7 +153,7 @@ const Employees = () => {
   return (
     <div className={styles.container}>
       <button className={styles.newBtn} onClick={handleCreate}>
-        Create New
+        Add New Employee
       </button>
       <div className={styles.employees}>
         {employees.map((employee, index) => {

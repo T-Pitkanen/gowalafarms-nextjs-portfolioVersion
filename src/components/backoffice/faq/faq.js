@@ -137,7 +137,7 @@ const Faqs = () => {
     <div className={styles.container}>
       <div className={styles.faqHeader}>
         {" "}
-        <h2>F.A.Qs</h2> <button onClick={handleCreateOpen}>Create New</button>
+       <button onClick={handleCreateOpen}>Create New</button>
       </div>
 
       <div className={styles.faq}>

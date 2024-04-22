@@ -8,11 +8,21 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 
   margin: 5vh 0;
 
-  gap: 3em;
+  gap: 10em;
+}
+
+.newBtn{
+  padding: 0.5em 1em;
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .productsContainer {
@@ -22,15 +32,20 @@
   align-items: center;
   justify-content: center;
 
-  width: 35%;
+  width: 25%;
   margin-bottom: 20px;
-  padding: 10px;
+
   border: 1px solid #ddd;
   border-radius: 5px;
 
   text-align: center;
 
-  gap: 1em;
+  gap: 2em;
+}
+
+.productsContainer p{
+  width: 50%;
+  text-align: left;
 }
 
 .container h3{
@@ -54,36 +69,16 @@
   object-fit: cover;
 }
 
-.form {
-
-  margin-top: 20px;
-}
-
-.form label {
-
-  display: block;
-
-  margin-bottom: 10px;
-}
-
-.form input,
-.form textarea {
-
+.buttons{
+  display: flex;
+  gap: 3em;
+  margin: 2vh 0;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  justify-content: center;
+
 }
 
-.form button {
-
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color-green);
-
-  color: white;
-
-  cursor: pointer;
+.buttons button{
+  font-size: 1.2em;
+  border-radius: 10px;
 }

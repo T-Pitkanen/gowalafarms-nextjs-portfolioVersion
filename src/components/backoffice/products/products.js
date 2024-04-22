@@ -3,17 +3,47 @@ import { useEffect, useState } from "react";
 import styles from "./products.module.css";
 import Image from "next/image";
 import productsData from "../../../data/products.json";
+import ModalNew from "../modals/modalProducts/new/modal";
+import ModalUpdate from "../modals/modalProducts/update/modal";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [updateModalIsOpen, setUpdateModalIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [id, setId] = useState(null);
+  const [title, setTitle] = useState(null);
+  const [image, setImage] = useState(null);
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [discount, setDiscount] = useState("");
 
   const getProducts = () => {
     setProducts(productsData);
   };
-  
+
   useEffect(() => {
     getProducts();
   }, []);
+
+  const handleCreate = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setUpdateModalIsOpen(false);
+  };
+
+  const handleEdit = (product) => {
+    setSelectedProduct(product);
+    setUpdateModalIsOpen(true);
+  };
+
+  const closeUpdateModal = () => {
+    setSelectedProduct(null);
+    setUpdateModalIsOpen(false);
+  };
 
   /*  ORIGINAL
   //GET
@@ -126,6 +156,7 @@ const Products = () => {
 
   return (
     <div className={styles.container}>
+      <button className={styles.newBtn} onClick={handleCreate}>Add New Product</button>
       <div className={styles.products}>
         {products.map((product, index) => {
           return (
@@ -137,7 +168,7 @@ const Products = () => {
                 width={500}
                 height={500}
               />
-              <p>{product._id}</p>
+
               <p>
                 <b>{product.title}</b>
               </p>
@@ -152,87 +183,50 @@ const Products = () => {
               {/* <button onClick={(e) => handleDelete(e, product._id)}>
                 Delete
               </button> */}
-              <button>
-                Delete
-              </button> 
+              <div className={styles.buttons}>
+                {" "}
+                <button onClick={() => handleEdit(product)}>Edit</button>
+                <button>Delete</button>{" "}
+              </div>
             </span>
           );
         })}
       </div>
 
-      <h3>Add New</h3>
+      <ModalNew
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+        id={id}
+        image={image}
+        title={title}
+        description={description}
+        discount={discount}
+        price={price}
+        handleCreate={handleCreate}
+        setTitle={setTitle}
+        setImage={setImage}
+        setDescription={setDescription}
+        setDiscount={setDiscount}
+        setPrice={setPrice}
+      />
 
-      {/* <form className={styles.form} onSubmit={handleSubmit}> */}
-      <form className={styles.form}>
-        <label>
-          {" "}
-          Title
-          <input type="text" name="title" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Price
-          <input type="number" name="price" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Discount In Percent
-          <input type="text" name="discountInPercent" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Description
-          <textarea type="text" name="description" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Exclusive?
-          <input type="checkbox" name="exclusive" defaultValue={""} />
-        </label>
-        <label>
-          {" "}
-          Product Image
-          <input type="file" name="file" placeholder="Select File" />
-        </label>
-        <button>Upload</button>
-      </form>
-
-      <h3>Update</h3>
-
-      {/* <form className={styles.form} onSubmit={handleUpdate}> */}
-      <form className={styles.form}>
-        <label>
-          ID
-          <input type="text" name="id" defaultValue={""} />
-        </label>
-        <label>
-          Title
-          <input type="text" name="title" defaultValue={""} />
-        </label>
-        <label>
-          Price
-          <input type="text" name="price" defaultValue={""} />
-        </label>
-        <label>
-          Description
-          <textarea type="text" name="description" defaultValue={""} />
-        </label>
-        <label>
-          Discount
-          <input type="text" name="discountInPercent" defaultValue={""} />
-        </label>
-        <label>
-          Exclusive?
-          <input type="checkbox" name="exclusive" />
-        </label>
-
-        <label>
-          Product Image
-          <input type="file" name="file" placeholder="Select File" />
-        </label>
-
-        <button>Update</button>
-      </form>
+      <ModalUpdate
+        modalIsOpen={updateModalIsOpen}
+        closeModal={closeModal}
+        id={id}
+        product={selectedProduct}
+        image={image}
+        title={title}
+        description={description}
+        discount={discount}
+        price={price}
+        handleCreate={handleCreate}
+        setTitle={setTitle}
+        setImage={setImage}
+        setDescription={setDescription}
+        setDiscount={setDiscount}
+        setPrice={setPrice}
+      />
     </div>
   );
 };
