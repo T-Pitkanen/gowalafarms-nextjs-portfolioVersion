@@ -172,7 +172,13 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1910px) {
+
+
+  .header {
+   width: 60%;
+  }
+
   .container form {
     width: 60%;
   }

@@ -37,6 +37,8 @@ const ModalUpdate = ({
         <label>
           Current Image
           <Image src={product.imagePath} alt={product.title} width={100} height={100} />
+          <br></br>
+          <br></br>
           New Image
           <input
             type="file"

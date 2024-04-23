@@ -46,3 +46,21 @@
 
   
 }
+@media screen and (min-width: 1910px) {
+    .container {
+       
+        width: 100%;
+        justify-content: space-between;
+        padding: 2em;
+        height: auto;
+    }
+
+    .partnerImg {
+        /* margin-left: 10vw; */
+        height: auto;
+        width: 40%;
+        object-fit: cover;
+    }
+
+  
+}

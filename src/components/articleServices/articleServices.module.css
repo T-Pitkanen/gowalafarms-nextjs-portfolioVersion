@@ -59,3 +59,44 @@
     flex-direction: row-reverse;
   }
 }
+
+@media screen and (min-width: 1910px) {
+  .container {
+    padding: 0 10vw;
+    gap: 10em;
+  }
+
+  .servicesWrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+
+  .servicesWrapper img {
+    width: 40%;
+    height: auto;
+  }
+
+  .servicesText {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 40%;
+  }
+
+  .servicesText h1 {
+    font-size: 2.25em;
+  }
+
+  .servicesText p {
+    font-size: 1.25em;
+  }
+
+  .servicesList {
+    font-size: 1.25em;
+  }
+
+  .servicesWrapperReverse {
+    flex-direction: row-reverse;
+  }
+}

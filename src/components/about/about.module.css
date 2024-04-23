@@ -60,3 +60,39 @@
     height: auto;
   }
 }
+
+
+@media screen and (min-width: 1910px) {
+
+  .container{
+    margin: 15vh 0;
+  }
+  
+  .aboutWrapper {
+    width: 80%;
+    flex-direction: row-reverse;
+    gap: 10em;
+  }
+
+  .aboutText h1 {
+    font-size: 2.25em;
+    text-align: left;
+  }
+
+  .aboutText {
+    width: 50%;
+  }
+
+  .aboutText p {
+    font-size: 1.25em;
+  }
+
+  .aboutList {
+    font-size: 1.25em;
+  }
+
+  .aboutWrapper img {
+    width: 40%;
+    height: auto;
+  }
+}

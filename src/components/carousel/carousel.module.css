@@ -119,3 +119,30 @@
     font-size: 3em;
   }
 }
+
+
+@media screen and (min-width: 1910px) {
+  .swiperImage {
+    height: 70vh;
+  }
+
+  .slideTitle {
+    padding-top: 20vh;
+  }
+
+  .slideTitle h1 {
+    font-size: 7em;
+  }
+  .slideTitle h2 {
+    font-size: 3em;
+  }
+
+  .slider button {
+    border: none;
+    padding: 1em 2em;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    font-weight: 500;
+    font-size: 1.25em;
+  }
+}

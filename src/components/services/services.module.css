@@ -76,6 +76,11 @@
 }
 
 @media screen and (min-width: 1910px) {
+
+
+  .serviceContainer{
+    width: 80%;
+  }
   .servicesHeader h1 {
     font-size: 2.75em;
   }
@@ -84,16 +89,22 @@
     font-size: 2.75em;
   }
 
+  .serviceWrapper{
+    width: 30%;
+    gap: 2em;
+  }
+
   .serviceWrapper h2,
   .serviceWrapper span {
     font-size: 2em;
   }
 
   .serviceWrapper p {
+    width: 70%;
     font-size: 1.25em;
   }
 
   .serviceImage {
-    width: 40%;
+    width: 30%;
   }
 }

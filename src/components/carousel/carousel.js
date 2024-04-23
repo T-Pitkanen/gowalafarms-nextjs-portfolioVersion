@@ -137,6 +137,7 @@ const Carousel = () => {
         rewind="true"
         speed="1000"
         scrollbar="true"
+        autoplay="true"
       >
         {images.map((image) => {
           return (
